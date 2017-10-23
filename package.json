@@ -1,0 +1,37 @@
+{
+  "name": "vue-project",
+  "version": "1.0.0",
+  "description": "vue project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c",
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JDEast1029/vue-project.git"
+  },
+  "keywords": [
+    "vue",
+    "webpack",
+    "Vuex",
+    "vue-router"
+  ],
+  "author": "at",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JDEast1029/vue-project/issues"
+  },
+  "homepage": "https://github.com/JDEast1029/vue-project#readme",
+  "dependencies": {
+    "vue": "^2.5.2",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.0"
+  },
+  "devDependencies": {
+    "rollup": "^0.50.0",
+    "rollup-plugin-buble": "^0.16.0",
+    "rollup-plugin-vue": "^2.5.2"
+  }
+}
