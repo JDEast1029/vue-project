@@ -4,8 +4,7 @@ import Vue from 'vue';
 import App from './App';
 import router from './router/routes';
 import store from '@/store/store';
-
-Vue.config.productionTip = false;
+import '@/utils/vue.config';
 
 /* eslint-disable no-new */
 new Vue({
