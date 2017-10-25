@@ -2,44 +2,42 @@
 	<div id="app">
 		<!-- <img src="./assets/logo.png"> -->
 		<router-view/>
-		<p v-on:click="count += 1">{{count}}</p>
 	</div>
 </template>
 
 <script>
 	export default {
 		name: 'app',
-		data() {
-			return {count: 0};
-		},
-		beforeCreate: () => {
+		beforeCreate: function() {
 			console.log('beforeCreate');
 		},
-		created: () => {
+		created: function() {
 			console.log('created');
 		},
-		beforeMount: () => {
+		beforeMount: function() {
 			console.log('beforeMount');
 		},
-		mounted: () => {
+		mounted: function() {
 			console.log('mounted');
 		},
-		beforeDestroy: () => {
+		beforeDestroy: function() {
 			console.log('beforeDestroy');
 		},
-		destroyed: () => {
+		destroyed: function() {
 			console.log('destroyed');
 		},
-		beforeUpdate: () => {
+		beforeUpdate: function() {
 			console.log('beforeUpdate');
 		},
-		updated: () => {
+		updated: function() {
 			console.log('updated');
 		}
 	};
 </script>
 
-<style>
+<style lang="scss">
+	@import '/styles/reset.scss';
+
 	#app {
 		font-family: 'Avenir', Helvetica, Arial, sans-serif;
 		-webkit-font-smoothing: antialiased;

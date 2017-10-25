@@ -2,10 +2,14 @@
 	<div class="hello">
 		<h1>{{ msg }}</h1>
 		<p v-on:click="count += 1">{{count}}</p>
+		<simple-counter :my-message="count"/>
+		<simple-counter/>
+		<simple-counter/>
 	</div>
 </template>
 
 <script>
+	import SimpleCounter from './SimpleCounter';
 	export default {
 		name: 'HelloWorld',
 		data() {
@@ -14,30 +18,33 @@
 				count: 0
 			};
 		},
-		beforeCreate: () => {
+		components: {
+			'simple-counter': SimpleCounter
+		},
+		beforeCreate: function() {
 			console.log('hello beforeCreate');
 		},
-		created: () => {
+		created: function() {
 			console.log('hello created');
 		},
-		beforeMount: () => {
+		beforeMount: function() {
 			console.log('hello beforeMount');
 		},
-		mounted: () => {
+		mounted: function() {
 			console.log('hello mounted');
 		},
-		beforeDestroy: () => {
+		beforeDestroy: function() {
 			console.log('hello beforeDestroy');
 		},
-		destroyed: () => {
+		destroyed: function() {
 			console.log('hello destroyed');
 		},
-		beforeUpdate: () => {
+		beforeUpdate: function() {
 			console.log('hello beforeUpdate');
 		},
-		updated: () => {
+		updated: function() {
 			console.log('hello updated');
-		},
+		}
 	};
 </script>
 
