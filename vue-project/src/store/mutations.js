@@ -1,1 +1,1 @@
-export const LONGIN_GET = 'LONGIN_GET';
+export const LOGIN_GET = 'LOGIN_GET';

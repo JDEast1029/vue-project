@@ -5,6 +5,7 @@ const NotFound = () => import(/* webpackChunkName: "notfound" */ '@/components/_
 const HelloWorld = () => import(/* webpackChunkName: "hello" */ '@/components/HelloWorld');
 const Home = () => import(/* webpackChunkName: "home" */ '@/containers/Home/App');
 const Stepper = () => import(/* webpackChunkName: "stepper" */ '@/containers/Stepper/App');
+const Login = () => import(/* webpackChunkName: "login" */ '@/containers/Login/App');
 
 Vue.use(Router);
 
@@ -13,6 +14,11 @@ export default new Router({
 	routes: [
 		{
 			path: '/',
+			name: 'Login',
+			component: Login
+		},
+		{
+			path: '/home',
 			name: 'Home',
 			component: Home
 		},

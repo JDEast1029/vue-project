@@ -1,4 +1,6 @@
-const BASE_URL = 'https://api.douban.com/v2/movie/in_theaters';
+import * as API from '@/store/api';
+
+const BASE_URL = 'http://localhost:8080';
 
 const fetchMixin = {
 	methods: {
@@ -7,6 +9,8 @@ const fetchMixin = {
 			let uri = '?';
 			//TODO 会根据type，在url后加上对应的接口
 			let url = BASE_URL;
+
+			if (!type && !API[type]) return;
 
 			//请求类型转大写
 			method = method && method.toLocaleUpperCase();
@@ -34,12 +38,11 @@ const fetchMixin = {
 			}
 
 			//TODO Loading commit
-			commit('increate');
-
+			// commit('increate');
 			post(url, formData)
 			.then((data) => {
 				onSuccess && onSuccess();
-				// commit();
+				// commit(type);
 			})
 			.catch((err) => {
 				onFailed && onFailed(err);
