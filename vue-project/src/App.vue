@@ -1,7 +1,9 @@
 <template>
 	<div id="app">
 		<!-- <img src="./assets/logo.png"> -->
-		<router-view/>
+		<transition name="slide">
+			<router-view/>
+		</transition>
 	</div>
 </template>
 
