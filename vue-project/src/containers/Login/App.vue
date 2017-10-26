@@ -19,7 +19,6 @@
 		},
 		methods: {
 			login: function() {
-				console.log(1)
 				this.ATFetcher(this.$store.commit, {
 					type: types.LOGIN_GET,
 					method: 'get',

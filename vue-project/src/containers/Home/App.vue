@@ -38,7 +38,6 @@
 					setTimeout(() => {
 						this.$store.commit('decrease');
 					}, 3000);
-					console.log(err);
 				}
 			});
 		},
