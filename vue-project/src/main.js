@@ -5,6 +5,10 @@ import App from './App';
 import router from './router/routes';
 import store from '@/store/store';
 import '@/utils/vue.config';
+import fetchMixin from '@/utils/net/fetcher';
+
+/* 全局混合fetcher请求对象 */
+Vue.mixin(fetchMixin);
 
 /* eslint-disable no-new */
 new Vue({

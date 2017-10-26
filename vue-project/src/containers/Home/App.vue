@@ -2,6 +2,7 @@
 	<ul class="button-list">
 		<li :key="index" v-for="(item, index) in items">
 			<Item :link="item.link" :name="item.name" />
+			<p>{{count}}</p>
 		</li>
 	</ul>
 </template>
@@ -24,6 +25,22 @@
 					}
 				]
 			};
+		},
+		computed: {
+			count: function() {
+				return this.$store.state.count;
+			}
+		},
+		created: function() {
+			this.ATFetcher(this.$store.commit, {
+				method: 'get',
+				onFailed: (err) => {
+					setTimeout(() => {
+						this.$store.commit('decrease');
+					}, 3000);
+					console.log(err);
+				}
+			});
 		},
 		components: {
 			'Item': Item
