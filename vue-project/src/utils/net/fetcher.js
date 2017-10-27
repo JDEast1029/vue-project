@@ -6,11 +6,12 @@ const fetchMixin = {
 	methods: {
 		ATFetcher: function(commit, {type, method, params, onSuccess, onFailed}) {
 			let formData = null;
-			let uri = '?';
+			let uri = '';
 			//TODO 会根据type，在url后加上对应的接口
 			let url = BASE_URL;
 
 			if (!type && !API[type]) return;
+			url = url + API[type];
 
 			//请求类型转大写
 			method = method && method.toLocaleUpperCase();
