@@ -26,10 +26,10 @@
 						name: this.name,
 						password: this.password
 					},
-					onSuccess: () => {},
-					onFailed: () => {
+					onSuccess: () => {
 						this.$router.push('/home');
-					}
+					},
+					onFailed: () => {}
 				});
 			}
 		}

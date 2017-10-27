@@ -32,7 +32,7 @@ const fetchMixin = {
 				}
 
 				uri = uri.substring(0, uri.length - 1);
-				url += uri;
+				url += '?' + uri;
 			} else {
 				console.error('暂不支持改请求类型');
 				return;
