@@ -1,4 +1,4 @@
-import * as API from '@/store/api';
+import API from '@/store/api';
 
 const BASE_URL = 'http://localhost:8080';
 
