@@ -1,6 +1,10 @@
+/**
+ * Created by AT on 2017/10/31.
+ */
 import Vue from 'vue';
 import Router from 'vue-router';
-import HelloWorld from '@/components/HelloWorld';
+//懒加载
+const HelloWorld = () => import(/* webpackChunkName: "hello" */ '@/components/HelloWorld');
 
 Vue.use(Router);
 
