@@ -6,7 +6,7 @@ import 'iview/dist/styles/iview.css';    // 使用 CSS
 import App from './App';
 import router from './router/routes';
 import store from './store/store';
-import fetchMixin from '@/utils/net/fetcher';
+import fetchMixin from '@/utils/mixins/fetcher';
 
 /* 全局混合fetcher请求对象 */
 Vue.mixin(fetchMixin);
