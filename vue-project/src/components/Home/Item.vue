@@ -13,7 +13,7 @@
 		},
 		data() {
 			return {
-				showItem: false
+				showItem: true
 			};
 		},
 		computed: {
@@ -22,9 +22,9 @@
 			}
 		},
 		mounted: function() {
-			setTimeout(() => {
-				this.showItem = true;
-			}, 1000);
+			// setTimeout(() => {
+			// 	this.showItem = true;
+			// }, 1000);
 		}
 	};
 </script>

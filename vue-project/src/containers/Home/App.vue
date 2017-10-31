@@ -22,6 +22,10 @@
 					{
 						link: '/stepper',
 						name: '计数器'
+					},
+					{
+						link: '/animate',
+						name: '动画'
 					}
 				]
 			};
