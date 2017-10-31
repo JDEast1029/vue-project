@@ -14,7 +14,6 @@
 			}
 		},
 		data() {
-			console.log(this.className);
 			return {
 				classes: 'icon ' + this.className
 			};
